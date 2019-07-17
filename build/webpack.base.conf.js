@@ -36,6 +36,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      // 这里可以将文件的位置变成所想要的符号 配置完需要重启项目 不然报错
+      'styles':resolve('src/assets/styles'),
     }
   },
   module: {

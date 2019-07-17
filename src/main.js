@@ -4,14 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 像素边框问题使用border.css  手机适应的css文件reset.css
-import './assets/styles/border.css'
+import 'styles/border.css'
+import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
 
 fastClick.attach(document.body)
-/*手机点击事件延迟300ms的问题解决*/
+// /*手机点击事件延迟300ms的问题解决*/
 
 /* eslint-disable no-new */
 new Vue({
