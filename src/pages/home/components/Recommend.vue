@@ -33,7 +33,8 @@ export default {
             "https://imgs.qunarzz.com/sight/p0/1709/41/411f234d79457081a3.img.jpg_200x200_ea02ef99.jpg",
           title: "大连圣亚海洋世界",
           desc: "浪漫吗？小伙子"
-        },{
+        },
+        {
           id: "0003",
           imgUrl:
             "https://imgs.qunarzz.com/sight/p0/1709/41/411f234d79457081a3.img.jpg_200x200_ea02ef99.jpg",
@@ -53,7 +54,7 @@ export default {
             "https://imgs.qunarzz.com/sight/p0/1709/41/411f234d79457081a3.img.jpg_200x200_ea02ef99.jpg",
           title: "大连圣亚海洋世界",
           desc: "浪漫吗？小伙子"
-        },
+        }
       ]
     };
   }
