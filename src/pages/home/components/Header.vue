@@ -7,10 +7,13 @@
       <span class="iconfont">&#xe632;</span>
       输入城市/景点/游玩主题
     </div>
-    <div class="header-right">
-      {{this.city}}
-      <span class="iconfont">&#xe6aa;</span>
-    </div>
+    <!-- 可以进行页面跳转的标签 router-link -->
+    <router-link to='/city'>
+      <div class="header-right">
+        {{this.city}}
+        <span class="iconfont">&#xe6aa;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -28,7 +31,7 @@ export default {
 </script>
 
 <!--设置这个组件只对这里.header有效-->
-<style scopd lang='stylus'>
+<style scoped lang='stylus'>
 // @import '../../../assets/styles/varibles.styl'
 // @import '~@/assets/styles/varibles.styl'
 @import '~styles/varibles.styl';
@@ -67,6 +70,7 @@ export default {
     width: 1.24rem;
     float: right;
     text-align: center;
+    color : #ffffff
   }
 }
 </style>
