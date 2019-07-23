@@ -28,6 +28,7 @@ export default {
     HomeWeekend
   },
   data() {
+    // 子组件必须return
     return {
       city: "",
       //传列表使用[]

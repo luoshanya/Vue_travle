@@ -18,7 +18,8 @@
                     </div>
                 </div>
             </div>
-            <div class="area" v-for="(items, key) of cities" :key="key">  
+            <!-- 显示字母b的内容 -->
+            <div class="area" v-for="(items, key) of cities" :key="key" :ref='key'>  
                 <div class="title border-topbottom">{{key}}</div>
                 <div class="item-list">
                     <div class="item border-bottom" v-for="innerItem of items" :key="innerItem.id">
@@ -37,10 +38,21 @@ export default {
     props : {
         hotCities : Array,
         cities : Object,
+        letter : String
     },
     // 拖拽 类似手机触摸功能
     mounted () {
         this.scroll = new Bscroll(this.$refs.wrapper)
+        console.log(this.cities);
+    },
+    watch : {
+        letter () {
+            if (this.letter) {
+                const element = this.$refs[this.letter][0]
+                this.scroll.scrollToElement(element)
+                
+            }
+        }
     }
 }
 </script>
