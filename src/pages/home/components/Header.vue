@@ -7,23 +7,28 @@
       <span class="iconfont">&#xe632;</span>
       输入城市/景点/游玩主题
     </div>
-    <!-- 可以进行页面跳转的标签 router-link -->
+    <!-- 可以进行页面跳转的标签 router-link   {{this.$store.state.city}}-->
     <router-link to='/city'>
       <div class="header-right">
-        {{this.city}}
-        <span class="iconfont">&#xe6aa;</span>
+        {{this.doubleCity}}
+        <span class="iconfont arrow-icons">&#xe6aa;</span>
       </div>
     </router-link>
   </div>
 </template>
 
 <script>
+import { mapState, mapGetters} from 'vuex'
 export default {
   name: "HomeHeader",
-  // 子组件接收父组件传来的信息
-  props: {
-    city: String
+  computed : {
+    ...mapState(['city']),
+    ...mapGetters(['doubleCity'])
   }
+  // 子组件接收父组件传来的信息
+  // props: {
+  //   city: String
+  // }
   //   components: {
   //       HomeHeader
   //   }
@@ -35,26 +40,25 @@ export default {
 // @import '../../../assets/styles/varibles.styl'
 // @import '~@/assets/styles/varibles.styl'
 @import '~styles/varibles.styl';
+@import '~styles/mixins.styl';
 
-.header {
+.header
   display: flex;
   line-height: 0.9rem;
   background: $bgColor;
   color: #fff;
   overflow: hidden;
 
-  .header-left {
+  .header-left
     width: 0.64rem;
     float: left;
 
-    .back-icon {
+    .back-icon
       text-align: center;
       font-size: 0.4rem;
       margin-left: 0.2rem;
-    }
-  }
 
-  .header-input {
+  .header-input 
     color: #cacaca;
     flex: 1;
     height: 0.55rem;
@@ -64,13 +68,16 @@ export default {
     background: #fff;
     border-radius: 0.1rem;
     padding-bottom: 0.3rem;
-  }
 
-  .header-right {
-    width: 1.24rem;
+  .header-right 
+    min-width: 1.04rem;
+    padding : 0 .1rem
     float: right;
     text-align: center;
-    color : #ffffff
-  }
-}
+    color : #ffffff;
+
+    .arrow-icons
+      margin-left : -.04rem
+      font-size : .34rem
+
 </style>
