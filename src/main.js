@@ -11,6 +11,7 @@ import 'styles/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import store from './store'
 import 'swiper/dist/css/swiper.css'
+import 'babel-polyfill'
 
 Vue.config.productionTip = false
 // /*手机点击事件延迟300ms的问题解决*/

@@ -2,15 +2,16 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <!-- 使有一像素的边框 直接使用 border-bottom-->
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <!-- 使有一像素的边框 直接使用 border-bottom tag="li"改标签名-->
+      <router-link tag="li"
+        class="item border-bottom" v-for="item of recommendList" :key="item.id" :to="'/detail/' + item.id">
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
           <button class="item-button">查看详情</button>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>

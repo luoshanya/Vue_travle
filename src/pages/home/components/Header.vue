@@ -10,7 +10,7 @@
     <!-- 可以进行页面跳转的标签 router-link   {{this.$store.state.city}}-->
     <router-link to='/city'>
       <div class="header-right">
-        {{this.doubleCity}}
+        {{this.city}}
         <span class="iconfont arrow-icons">&#xe6aa;</span>
       </div>
     </router-link>
@@ -23,6 +23,7 @@ export default {
   name: "HomeHeader",
   computed : {
     ...mapState(['city']),
+    // 插入数据
     ...mapGetters(['doubleCity'])
   }
   // 子组件接收父组件传来的信息
